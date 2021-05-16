@@ -142,6 +142,10 @@ nav{
 }
 
 .content{
-  height:500px;
+  height:500px
   background: #701D1B;
+}
+
+#particles.js{
+  width:100%;
 }
