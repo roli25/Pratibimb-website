@@ -41,9 +41,6 @@ body{
   padding-left:1px;
   padding-right:0;
 }
-.active {
-  background-color:#2B2929;
-}
 
 .dropdown {
   float: left;
@@ -104,7 +101,7 @@ body{
 }
 .column {
   float: left;
-  height: 466px;
+  height: 600px;
 }
 
 .column span{
@@ -126,6 +123,8 @@ body{
 }
 .right {
   width: 50%;
+  background: url(img/events.png);
+  background-size: 100% 100%;
 }
  
 .right img{
@@ -147,13 +146,31 @@ body{
 }
 .column1,.column2{
   float: left;
-  height: 25rem; /* Should be removed. Only for demonstration */
+  height: 600px; /* Should be removed. Only for demonstration */
 }
-
+.milestones{
+  background: url(img/milestones.png);
+  background-size: 100% 100%;
+  position: relative;
+}
+.archives{
+  background: url(img/archives.png);
+  background-size: 100% 100%;
+  position: relative;
+}
 .milestones, .archives,.upcoming,.pic {
   width: 25%;
 }
-
+.upcoming{
+  background: url(img/sandclock.png);
+  background-size: 100% 100%;
+  position: relative;
+}
+.pic{
+  background: url(img/Rectangle.png);
+  background-size: 100% 100%;
+  position: relative;
+}
 .achieve{
   width: 50%;
   background-color: #242424;
@@ -161,13 +178,13 @@ body{
 }
 
 /* Clear floats after the columns */
-.row1:after,.row2:after,.row:after {
+.row1:after,.row2:after,.row:after,row3:after {
   content: "";
   display: table;
   clear: both;
 }
 @media screen and (max-width: 600px) {
-  .column1,.column,.column2,column4 {
+  .column1,.column,.column2,column4 ,column3{
     width: 100%;
   }
 
@@ -185,14 +202,16 @@ font-size: 33px;
   font-size: 16px;
   color: #FFFFFF;
 }
-
+.achieve p{
+  margin-bottom: 70px;
+}
 .achieve h5{
 font-style: italic;
 font-weight: 500;
 font-size: 16px;
 color: #EDCA2B;
 }
-.middle h2{
+.middle h2,.right-contact h2{
   font-weight: 600;
 font-size: 33px;
 }
@@ -202,10 +221,14 @@ font-weight: 500;
 font-size: 16px;
 color: #F3875F;
 }
+.middle p{
+  margin-bottom:50px;
+}
 .member{
   background: #242424;
   text-align: center;
   padding:5%;
+  height: 600px;
 }
 
 .member p{
@@ -226,7 +249,7 @@ color: #FFFFFF;
 .footer{
   background: #C4C4C4;
   padding-left:4%;
-  padding-right: 4%;
+  padding-right: 0;
   font-family: 'Mulish', sans-serif;
 }
 .footer_logo{
@@ -307,3 +330,99 @@ color: #FFFFFF;
 #insta{
   margin-left: 0;
 }
+
+.column3 {
+  float: left;
+  height: 600px; /* Should be removed. Only for demonstration */
+}
+
+.left-contact {
+  width: 50%;
+  background:url(img/martix.png);
+  background-size: 100% 100%;
+}
+
+.right-contact {
+  width: 50%;
+  padding:4% 8% 7% 5%;
+  background: #2B2929;
+  
+}
+
+.archives-image,.milestones-image,.upcoming-image,.past-image{
+  height: 150px;
+  width: 238px;
+}
+.archives-image:before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(img/archives.png);
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+  transition: .4s ease-in-out;
+}
+.archives-image:hover:before ,.milestones-image:hover:before,.upcoming-image:hover:before,.past-image:hover:before {
+  -webkit-filter: grayscale(0) blur(6px);
+  filter: grayscale(0) blur(6px);
+  transition: .4s ease-in-out;
+}
+
+.archives-image > p,.milestones-image > p,.upcoming-image > p,.past-image > p {
+  display: none;
+}
+.archives-image:hover > p,.milestones-image:hover > p,.upcoming-image:hover > p,.past-image:hover > p {
+  position: absolute;
+  top: 40%;
+  display: block;
+  color: #ffffff;
+  font-size: 33px;
+  font-weight: 600;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: .4s ease-in-out;
+}
+.milestones-image:before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(img/milestones.png);
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+  transition: .4s ease-in-out;
+}
+.upcoming-image:before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(img/sandclock.png);
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+  transition: .4s ease-in-out;
+  background-size: 100% 100%;
+}
+.past-image:before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(img/Rectangle.png);
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+  transition: .4s ease-in-out;
+  background-size: 100% 100%;
+}
+
